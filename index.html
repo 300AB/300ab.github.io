@@ -4,17 +4,30 @@
     <title>Index</title>
     <link href="https://fonts.googleapis.com/css2?family=Comic-Neue:wght@400;700&display=swap" rel="stylesheet">
       <style>
-    rt, rp {
+      rt, rp {
       font-size: 0.6em;
       color: #aaa;
-      font-style: italic;
+      font-style: italic; }
+  
+    @keyframes candleFlicker {
+      0%   { opacity: 0.4; text-shadow: none; } /* dim and dead */
+      20%  { opacity: 0.6; text-shadow: 0 0 1px #663300; } /* spark */
+      40%  { opacity: 0.8; text-shadow: 0 0 2px #aa5522; }
+      100%  { opacity: 0.9; text-shadow: 0 0 4px #ffaa55; } /* full glow */
     }
+
+.flicker {
+  /*animation: candleFlicker 16s steps(1, end) infinite;*/
+  animation: candleFlicker 8s infinite ease-in-out;
+
+}
+  
   </style>
   </head>
 
 <body style="background-color:#181818; color: #eee; font-family: 'Comic Neue', cursive;">
   <div style="margin: 0 auto; width: fit-content;">
-    <h3 style="text-align: center;">🕯️&#8201;Index of Impermanence&#8201;🕯️</h3>
+    <h3 class="flicker" style="text-align: center;">🕯️&#8201;Index of Impermanence&#8201;🕯️</h3>
     <p style="text-align: center; margin-top: 0; font-size: 1.2em; font-family: 'Comic Neue', cursive; color: #ccc;"">
       <ruby>Momento mori<rt>memento vivere</rt><rp>memento mori</rp></ruby>
     </p>
