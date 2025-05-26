@@ -9,21 +9,17 @@
         color: #aaa;
         font-style: italic; }
   
-  @keyframes candleFlicker 
-    {
+  @keyframes candleFlicker {
       0%   { opacity: 0.4; text-shadow: none; } /* dim and dead */
       20%  { opacity: 0.6; text-shadow: 0 0 1px #663300; } /* spark */
       40%  { opacity: 0.8; text-shadow: 0 0 2px #aa5522; }
       60%  { opacity: 0.9; text-shadow: 0 0 4px #ffaa55; } /* full glow */
       80%  { opacity: 0.8; text-shadow: 0 0 2px #aa5522; }
       90%  { opacity: 0.6; text-shadow: 0 0 1px #663300; }
-      100% { opacity: 0.4; text-shadow: none; } /* back to dim */
-    }
+      100% { opacity: 0.4; text-shadow: none; } /* back to dim */}
 
-.flicker
-  {
-    animation: candleFlicker 8s infinite ease-in-out;
-  }
+.flicker{
+    animation: candleFlicker 8s infinite ease-in-out;}
   
   </style>
   </head>
