@@ -134,3 +134,35 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# System gunk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Python stuff (if ever used)
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+.env
+
+# Editor stuff
+.vscode/
+
+# Backup + temp
+*.bak
+*.tmp
+*.swp
+*~
+
+# Output folders for tools (React, Next, etc)
+.cache/
+.next/
+out/
+coverage/
