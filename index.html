@@ -10,7 +10,6 @@
       color: #aaa;
       font-style: italic;
     }
-
     @keyframes candleFlicker {
       0%   { opacity: 0.4; text-shadow: none; }
       20%  { opacity: 0.6; text-shadow: 0 0 1px #663300; }
@@ -18,12 +17,18 @@
       60%  { opacity: 0.9; text-shadow: 0 0 4px #ffaa55; }
       80%  { opacity: 0.8; text-shadow: 0 0 2px #aa5522; }
       90%  { opacity: 0.6; text-shadow: 0 0 1px #663300; }
-      100% { opacity: 0.4; text-shadow: none; }
-    }
-
+      100% { opacity: 0.4; text-shadow: none; }}
     .flicker {
-      animation: candleFlicker 8s infinite ease-in-out;
-    }
+      animation: candleFlicker 8s infinite ease-in-out;}
+  
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.2); } }
+    .twinkle {
+      animation: twinkle 1.2s infinite ease-in-out alternate;
+      display: inline-block; 
+      font-size: var(--twinkle-size, 1em); /* default size if not set */}
+
   </style>
 </head>
 
@@ -35,13 +40,19 @@
     </p>
     
     <p style="text-align: center; margin-top: 0; font-size: 1.5em; font-family: 'Comic Neue', cursive; color: #ccc;">
-      <ruby>Momento mori<rt>memento vivere</rt><rp>memento mori</rp></ruby>
+            <span class="twinkle" style="--twinkle-size: .5em;">✦</span>  
+      <ruby>Momento mori<rt>memento vivere</rt><rp>memento vivere</rp></ruby>
+            <span class="twinkle" style="--twinkle-size: .5em;">✦</span>
     </p>
   </div>
 
   <div style="margin: 0 auto; width: 60%; max-width: 1100px;">
     <details style="text-align: center;">
-      <summary>Dropdown~</summary>
+      <summary>
+        <span class="twinkle" style="--twinkle-size: .2em;">✦</span>
+        Secrets
+        <span class="twinkle" style="--twinkle-size: .2em;">✦</span>
+      </summary>
       <fieldset>
         <details style="text-align: center;">
           <summary>Git~</summary>
