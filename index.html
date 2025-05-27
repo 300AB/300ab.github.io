@@ -10,6 +10,7 @@
       color: #aaa;
       font-style: italic;
     }
+
     @keyframes candleFlicker {
       0%   { opacity: 0.4; text-shadow: none; }
       20%  { opacity: 0.6; text-shadow: 0 0 1px #663300; }
@@ -17,32 +18,81 @@
       60%  { opacity: 0.9; text-shadow: 0 0 4px #ffaa55; }
       80%  { opacity: 0.8; text-shadow: 0 0 2px #aa5522; }
       90%  { opacity: 0.6; text-shadow: 0 0 1px #663300; }
-      100% { opacity: 0.4; text-shadow: none; }}
+      100% { opacity: 0.4; text-shadow: none; }
+    }
+
     .flicker {
-      animation: candleFlicker 8s infinite ease-in-out;}
-  
+      animation: candleFlicker 8s infinite ease-in-out;
+    }
+
     @keyframes twinkle {
       0%, 100% { opacity: 0.6; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.2); } }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+
     .twinkle {
       animation: twinkle 1.2s infinite ease-in-out alternate;
-      display: inline-block; 
-      font-size: var(--twinkle-size, 1em); /* default size if not set */}
+      display: inline-block;
+      font-size: var(--twinkle-size, 1em);
+    }
 
+    details > summary {
+      cursor: pointer;
+      list-style: none;
+      padding-left: 0;
+      position: relative;
+    }
+
+    details details > summary {
+      padding-left: 0;
+      text-align: center;
+      position: relative;
+    }
+
+    details details > summary::before {
+      content: '☰';
+      position: absolute;
+      left: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1em;
+      color: #999;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .link-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      margin-bottom: 0.8em;
+      text-align: center;
+    }
+
+    .link-or {
+      font-style: italic;
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+
+    .link-row a {
+      white-space: nowrap;
+    }
   </style>
 </head>
 
 <body style="background-color:#181818; color: #eee; font-family: 'Comic Neue', cursive; margin: 0; padding: 0;">
   <div style="margin: 0 auto; width: 90%; max-width: 1000px;">
-        
     <p class="flicker" style="text-align: center; font-size: clamp(1.5rem, 5vw, 2.5rem);">
       🕯️ Index of Impermanence 🕯️
     </p>
     
     <p style="text-align: center; margin-top: 0; font-size: 1.5em; font-family: 'Comic Neue', cursive; color: #ccc;">
-            <span class="twinkle" style="--twinkle-size: .5em;">✦</span>  
+      <span class="twinkle" style="--twinkle-size: .5em;">✦</span>  
       <ruby>Momento mori<rt>memento vivere</rt><rp>memento vivere</rp></ruby>
-            <span class="twinkle" style="--twinkle-size: .5em;">✦</span>
+      <span class="twinkle" style="--twinkle-size: .5em;">✦</span>
     </p>
   </div>
 
@@ -53,19 +103,25 @@
         Secrets
         <span class="twinkle" style="--twinkle-size: .2em;">✦</span>
       </summary>
+
       <fieldset>
-        <details style="text-align: center;">
-          <summary>Git~</summary>
+        <details>
+          <summary><span>Git</span></summary>
           <fieldset>
-            <legend> Links~</legend>
-            <div style="text-align: center; margin-bottom: 0.5em;">
-              <a href="https://github.com/300AB/300ab.github.io" target="_parent" rel="noopener noreferrer">Github Repo!</a> or 
-              <a href="https://github.com/300AB/300ab.github.io" target="_blank" rel="noopener noreferrer">New Tab!</a>
+            <legend>Links~</legend>
+
+            <div class="link-row">
+              <a href="https://github.com/300AB/300ab.github.io" target="_parent">Github Repo!</a>
+              <span class="link-or">or</span>
+              <a href="https://github.com/300AB/300ab.github.io" target="_blank">New Tab!</a>
             </div>
-            <div style="text-align: center; margin-bottom: 0.5em;">
-              <a href="https://300ab.github.io" target="_parent" rel="noopener noreferrer">Here!</a> or
-              <a href="https://300ab.github.io" target="_blank" rel="noopener noreferrer">New Tab!</a>
+
+            <div class="link-row">
+              <a href="https://300ab.github.io" target="_parent">Here!</a>
+              <span class="link-or">or</span>
+              <a href="https://300ab.github.io" target="_blank">New Tab!</a>
             </div>
+            
           </fieldset>
         </details>
       </fieldset>
