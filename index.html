@@ -8,8 +8,7 @@
     rt, rp {
       font-size: 0.6em;
       color: #aaa;
-      font-style: italic;
-    }
+      font-style: italic;}
 
     @keyframes candleFlicker {
       0%   { opacity: 0.4; text-shadow: none; }
@@ -18,37 +17,27 @@
       60%  { opacity: 0.9; text-shadow: 0 0 4px #ffaa55; }
       80%  { opacity: 0.8; text-shadow: 0 0 2px #aa5522; }
       90%  { opacity: 0.6; text-shadow: 0 0 1px #663300; }
-      100% { opacity: 0.4; text-shadow: none; }
-    }
-
+      100% { opacity: 0.4; text-shadow: none; }}
     .flicker {
-      animation: candleFlicker 8s infinite ease-in-out;
-    }
+      animation: candleFlicker 8s infinite ease-in-out;}
 
     @keyframes twinkle {
       0%, 100% { opacity: 0.6; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.2); }
-    }
-
+      50% { opacity: 1; transform: scale(1.2); }}
     .twinkle {
       animation: twinkle 1.2s infinite ease-in-out alternate;
       display: inline-block;
-      font-size: var(--twinkle-size, 1em);
-    }
-
-    details > summary {
+      font-size: var(--twinkle-size, 1em); }
+    
+      details > summary {
       cursor: pointer;
       list-style: none;
       padding-left: 0;
-      position: relative;
-    }
-
+      position: relative;}
     details details > summary {
       padding-left: 0;
       text-align: center;
-      position: relative;
-    }
-
+      position: relative;}
     details details > summary::before {
       content: '☰';
       position: absolute;
@@ -58,8 +47,7 @@
       font-size: 1em;
       color: #999;
       user-select: none;
-      pointer-events: none;
-    }
+      pointer-events: none;}
 
     .link-row {
       display: grid;
@@ -68,18 +56,13 @@
       justify-content: center;
       gap: 0.5em;
       margin-bottom: 0.8em;
-      text-align: center;
-    }
-
+      text-align: center;}
     .link-or {
       font-style: italic;
       opacity: 0.8;
-      white-space: nowrap;
-    }
-
+      white-space: nowrap;}
     .link-row a {
-      white-space: nowrap;
-    }
+      white-space: nowrap;}
   </style>
 </head>
 
@@ -125,6 +108,7 @@
           </fieldset>
         </details>
       </fieldset>
+    
     </details>
   </div>
 </body>
