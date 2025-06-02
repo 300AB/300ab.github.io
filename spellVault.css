@@ -1,0 +1,26 @@
+/* === spellVault.css === */
+
+/* === Zone: Base Spellcasting Layout === */
+.spell {
+  font-family: 'comicneue', sans-serif;
+  color: #eee;
+  background-color: #181818;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 1em;
+  text-align: center;}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+.text-center {
+  text-align: center;}
+.b7 {
+  font-weight: 700;}
+
+/* === Zone: Margin Utilities === */
+.mT-1 { margin-top: 1em;}
+.mT-2 { margin-top: 2em;}
+.mB-2 { margin-bottom: 2em;}
+.m-2 { margin: 2em;}
+.m-0 { margin: 0;}
