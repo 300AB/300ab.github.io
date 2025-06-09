@@ -1,0 +1,11 @@
+Comic Neue Font
+----------------
+
+This font is licensed under the SIL Open Font License, Version 1.1.
+
+You can find the full license text here: https://scripts.sil.org/OFL
+
+Font source: https://github.com/crozynski/comicneue
+
+You are free to use, modify, and embed this font in your projects,
+as long as you do not sell the font on its own and keep this license intact.
